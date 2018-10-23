@@ -1,0 +1,14 @@
+Package: dartx
+Type: Package
+Title: Applies Drainage Area Ratio Method With Bias Correction
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: Michael Schramm <michael.schramm@ag.tamu.edu>
+Description: Applies bias correction values reccomended by Asquith 
+    et al. (2006) to drainage-area ratio derived flows for streams
+    in Texas.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/mps9506/dartx
+BugReports: https://github.com/mps9506/dartx/issues
