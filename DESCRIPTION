@@ -1,14 +1,19 @@
 Package: dartx
 Type: Package
-Title: Applies Drainage Area Ratio Method With Bias Correction
+Title: Applies Drainage Area Ratio Method With Correction Factors
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: Michael Schramm <michael.schramm@ag.tamu.edu>
-Description: Applies bias correction values reccomended by Asquith 
-    et al. (2006) to drainage-area ratio derived flows for streams
-    in Texas.
-License: What license is it under?
+Authors@R: person("Schramm", "Michael", email = "michael.schramm@ag.tamu.edu",
+  role = c("aut", "cre"))
+Description: Applies empircally derived parameters for drainage
+    area ratio calculated streamflows in Texas.
+License: GPL-3
+Depends: 
+    dplyr,
+    fuzzyjoin
+Suggests:
+    dataRetrieval
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/mps9506/dartx
 BugReports: https://github.com/mps9506/dartx/issues
+RoxygenNote: 6.1.0
