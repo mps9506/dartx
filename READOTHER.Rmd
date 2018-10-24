@@ -35,4 +35,3 @@ The DAR method is a simple method to estimate streamflows with the assumption th
 Y = X \\left (\\frac{A_{y}}{A_{x}} \\right)^\\phi
 \$$
 
-touch
