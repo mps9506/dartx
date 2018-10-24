@@ -29,6 +29,4 @@ assumption that the relationship between streamflows at a gaged site and
 an ungaged site are equivelent to the ratio of the drainage areas. In
 practice this looks like:
 
-\[
-Y = X \left (\frac{A_{y}}{A_{x}} \right)^\phi
-\]
+$$ Y = X \\left (\\frac{A\_{y}}{A\_{x}} \\right)^\\phi $$

@@ -31,7 +31,7 @@ Currently there are no plans to submit the package to CRAN.
 
 The DAR method is a simple method to estimate streamflows with the assumption that the relationship between streamflows at a gaged site and an ungaged site are equivelent to the ratio of the drainage areas. In practice this looks like:
 
-$$
-Y = X \left (\frac{A_{y}}{A_{x}} \right)^\phi
-$$
+\$$
+Y = X \\left (\\frac{A_{y}}{A_{x}} \\right)^\\phi
+\$$
 
