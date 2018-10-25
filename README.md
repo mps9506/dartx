@@ -124,7 +124,7 @@ ggplot(comparison) +
   geom_abline(intercept = 0, slope = 1) +
   coord_equal() +
   theme_ipsum_rc(axis = TRUE) +
-  labs(title = "Measured Flow vs Estimated Flow",
+  labs(subtitle = "Measured Flow vs Estimated Flow at the same site",
        x = "log Measured Flow",
        y = "log DAR Estimated Flow")
 ```
