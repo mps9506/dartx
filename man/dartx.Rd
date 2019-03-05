@@ -25,7 +25,7 @@ be applied.}
 dataframe supplied for the argument \code{customPhi}.}
 }
 \value{
-dataframe with new variables: cume_dist, exp and Q. Where cume_dist
+dataframe with new variables: Q_percentile, exp and Q. Where Q_percentile
  are the non-exceedance probability, exp are the values of phi applied to the
  DAR calculation and Q is the DAR estimated flow value.
 }

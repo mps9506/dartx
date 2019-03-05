@@ -7,7 +7,7 @@
 phi(df, defaultPhi = TRUE, ...)
 }
 \arguments{
-\item{df}{dataframe with a column cume_dist}
+\item{df}{dataframe with a column Q_percentile}
 
 \item{...}{optional argument customPhi. Where customPhi is a dataframe with min, max, exp. Specifying the streamflow percentiles to apply values of phi (exp).}
 }
