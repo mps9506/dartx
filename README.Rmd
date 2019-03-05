@@ -80,12 +80,12 @@ output %>%
   rename(GagedFlow = Flow, EstimatedFlow = Q) %>%
   tidyr::gather(key = type, value = cfs, GagedFlow, EstimatedFlow) %>%
   filter(cfs > 0 ) %>%
-  ggplot(aes(cume_dist, cfs)) +
+  ggplot(aes(Q_percentile, cfs)) +
   geom_line(aes(color = type)) +
   scale_y_log10() +
   theme_ipsum_rc(axis = TRUE) +
   labs(title = "Flow Duration Curves", subtitle = "Measured and estimated flows at different sites",
-       y = "Discharge (cfs)", x = "Streamflow percentile")
+       y = "Discharge (cfs)", x = "Streamflow percentile (Non-Exceedance Probability")
 ```
 
 Make a quick comparison to the actual measured flows at site 08109800

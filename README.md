@@ -96,13 +96,13 @@ Apply the dartx function to get streamflows at the ungaged site.
 ``` r
 output <- dartx(Davidson, flow = Flow, dar = dar)
 head(output)
-#>   agency_cd  site_no       Date Flow Flow_cd cume_dist exp Q
-#> 1      USGS 08110100 2015-08-29    0       A         1 0.7 0
-#> 2      USGS 08110100 2015-08-30    0       A         1 0.7 0
-#> 3      USGS 08110100 2015-08-31    0       A         1 0.7 0
-#> 4      USGS 08110100 2015-09-01    0       A         1 0.7 0
-#> 5      USGS 08110100 2015-09-02    0       A         1 0.7 0
-#> 6      USGS 08110100 2015-09-03    0       A         1 0.7 0
+#>   agency_cd  site_no       Date Flow Flow_cd   cume_dist   exp Q
+#> 1      USGS 08110100 2015-08-29    0       A 0.000911577 0.885 0
+#> 2      USGS 08110100 2015-08-30    0       A 0.001823154 0.885 0
+#> 3      USGS 08110100 2015-08-31    0       A 0.002734731 0.885 0
+#> 4      USGS 08110100 2015-09-01    0       A 0.003646308 0.885 0
+#> 5      USGS 08110100 2015-09-02    0       A 0.004557885 0.885 0
+#> 6      USGS 08110100 2015-09-03    0       A 0.005469462 0.885 0
 ```
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
