@@ -61,7 +61,7 @@ dartx <- function(.data, flow, dar, defaultPhi = TRUE, ...) {
 
   .data <- .data %>%
     arrange(!! flow) %>%
-    mutate(cume_dist = cume_dist(-!! flow))
+    mutate(cume_dist = 1 - lmomco::pp(!! flow))
 
   if (defaultPhi) {
     .data <- phi(.data)
