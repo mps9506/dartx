@@ -7,9 +7,13 @@ Authors@R: person("Schramm", "Michael", email = "michael.schramm@ag.tamu.edu",
 Description: Applies empircally derived parameters for drainage
     area ratio calculated streamflows in Texas.
 License: GPL-3
-Depends: 
+Depends:
+    R (>= 2.10)
+Imports:
     dplyr,
-    fuzzyjoin
+    fuzzyjoin,
+    lmomco,
+    rlang
 Suggests:
     dataRetrieval
 Encoding: UTF-8
