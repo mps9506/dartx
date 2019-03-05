@@ -21,10 +21,12 @@
 #' @param ... optional arguments. If \code{defaultPhi = TRUE}, expects a
 #'   dataframe supplied for the argument \code{customPhi}.
 #'
-#' @return dataframe with new variables: cume_dist, exp and Q. Where cume_dist
+#' @return dataframe with new variables: Q_percentile, exp and Q. Where Q_percentile
 #'  are the non-exceedance probability, exp are the values of phi applied to the
 #'  DAR calculation and Q is the DAR estimated flow value.
 #' @import dplyr
+#' @import rlang
+#' @importFrom lmomco pp
 #' @export
 #' @details The drainage area ratio is an algebraic method for estimating same-day
 #'   streamflows from one location to another on the basis the the ratio of the
@@ -61,7 +63,7 @@ dartx <- function(.data, flow, dar, defaultPhi = TRUE, ...) {
 
   .data <- .data %>%
     arrange(!! flow) %>%
-    mutate(cume_dist = 1 - lmomco::pp(!! flow))
+    mutate(Q_percentile = lmomco::pp(!! flow))
 
   if (defaultPhi) {
     .data <- phi(.data)
@@ -82,7 +84,7 @@ dartx <- function(.data, flow, dar, defaultPhi = TRUE, ...) {
   }
 
   .data <- .data %>%
-    mutate(Q = Flow * (dar^exp)) %>%
+    mutate(Q = !! flow * (dar^exp)) %>%
     select(-min, -max)
 
   return(.data)
@@ -91,7 +93,7 @@ dartx <- function(.data, flow, dar, defaultPhi = TRUE, ...) {
 
 #' Estimate Values of Phi
 #'
-#' @param df dataframe with a column cume_dist
+#' @param df dataframe with a column Q_percentile
 #' @param ... optional argument customPhi. Where customPhi is a dataframe with min, max, exp. Specifying the streamflow percentiles to apply values of phi (exp).
 #'
 #' @return dataframe
@@ -112,8 +114,8 @@ phi <- function(df, defaultPhi = TRUE, ...) {
   }
 
   df <- df %>%
-    fuzzyjoin::fuzzy_left_join(Phi, by = c("cume_dist" = "min",
-                                                    "cume_dist" = "max"),
+    fuzzyjoin::fuzzy_left_join(Phi, by = c("Q_percentile" = "min",
+                                                    "Q_percentile" = "max"),
                                match_fun = list(`>=`, `<`))
 
   return(df)
