@@ -2,7 +2,7 @@ Package: dartx
 Type: Package
 Title: Applies Drainage Area Ratio Method With Correction Factors
 Version: 0.1.0
-Authors@R: person("Schramm", "Michael", email = "michael.schramm@ag.tamu.edu",
+Authors@R: person("Michal", "Schramm", email = "michael.schramm@ag.tamu.edu",
   role = c("aut", "cre"))
 Description: Applies empircally derived parameters for drainage
     area ratio calculated streamflows in Texas.
